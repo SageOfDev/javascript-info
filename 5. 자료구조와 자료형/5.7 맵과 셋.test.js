@@ -1,5 +1,5 @@
-/*
-출처: https://ko.javascript.info/map-set
+/**
+ * 출처: https://ko.javascript.info/map-set
 
 - 객체: 키(문자열, 심볼형)가 있는 컬렉션을 저장함
 - 배열: 순서가 있는 컬렉션을 저장함

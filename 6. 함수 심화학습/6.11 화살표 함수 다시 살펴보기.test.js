@@ -32,5 +32,3 @@ describe('화살표함수 다시 살펴보기', () => {
 
 
 })
-
-console.log('hi')

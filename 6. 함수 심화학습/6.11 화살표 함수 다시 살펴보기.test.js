@@ -1,5 +1,4 @@
 /*
-출처: https://ko.javascript.info/arrow-functions
 
  */
 describe('화살표함수 다시 살펴보기', () => {

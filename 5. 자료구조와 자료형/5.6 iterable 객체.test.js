@@ -1,5 +1,4 @@
 /**
- * 출처: https://ko.javascript.info/iterable
 
 iterable 객체
   - for..of를 사용 가능한 객체

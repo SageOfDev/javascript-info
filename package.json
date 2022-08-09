@@ -1,0 +1,22 @@
+{
+  "name": "t",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SageOfDev/javascript-info.git"
+  },
+  "author": "SageOfDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SageOfDev/javascript-info/issues"
+  },
+  "homepage": "https://github.com/SageOfDev/javascript-info#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}

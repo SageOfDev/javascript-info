@@ -86,13 +86,21 @@ describe('프로퍼티와 getter와 setter', () => {
     user.name = ""
   })
   test('호환성을 위해 사용하기', () => {
-    function User(name, age) {
+    function User(name, birthday) {
       this.name = name
-      this.age = age
+      this.birthday = birthday
+
+      Object.defineProperty(this, "age", {
+        get() {
+          let todayYear = new Date().getFullYear()
+          return todayYear - this.birthday.getFullYear()
+        }
+      })
     }
 
-    let john = new User('John', 25)
+    let john = new User('John', new Date(1992, 6, 1))
 
-    console.log( john.age )
+    console.log(john.birthday)
+    console.log(john.age)
   })
 })

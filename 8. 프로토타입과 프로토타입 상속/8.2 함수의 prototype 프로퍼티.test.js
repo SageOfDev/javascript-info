@@ -42,4 +42,21 @@ describe('함수의 prototype 프로퍼티', () => {
 
     Rabbit.prototype.jumps = true
   })
+  test('함수의 디폴트 프로퍼티 prototype과 constructor 프로퍼티', () => {
+    function Rabbit() {}
+
+    console.log(Rabbit.prototype.constructor === Rabbit )
+
+
+    let rabbit = new Rabbit()
+
+    console.log(rabbit.constructor === Rabbit)
+
+
+    function Rabbit(name) {
+      this.name = name
+      console.log(name)
+    }
+
+  })
 })

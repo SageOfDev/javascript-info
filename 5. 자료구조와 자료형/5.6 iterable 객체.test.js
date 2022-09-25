@@ -1,29 +1,29 @@
 /**
 iterable 객체
   - for..of를 사용 가능한 객체
-  - 배열을 일반화한 객체
-  - Symbol.iterator(특수 내장 심볼) 메서드를 가지고 있는 객체
+ - 배열을 일반화한 객체
+ - Symbol.iterator(특수 내장 심볼) 메서드를 가지고 있는 객체
 
-Symbol.iterator
-  - iterator(이터레이터)라는 객체를 반환하는 메서드
+ Symbol.iterator
+ - iterator(이터레이터)라는 객체를 반환하는 메서드
 
-iterator
-  - 메서드 next가 있는 객체
+ iterator
+ - 메서드 next가 있는 객체
 
-next
-  - { done: Boolean, value: any } 객체를 반환하는 iterator의 메서드
-  - `done = true` 는 반환이 종료되었음을 의미
-  - `done = false` 는 value에 다음 값이 저장
+ next
+ - { done: Boolean, value: any } 객체를 반환하는 iterator의 메서드
+ - `done = true` 는 반환이 종료되었음을 의미
+ - `done = false` 는 value에 다음 값이 저장
 
-for..of
-  - Symbol.iterator를 호출
-  - 반환 된 iterator만을 대상으로 동작
+ for..of
+ - Symbol.iterator를 호출
+ - 반환된 iterator만을 대상으로 동작
 
-array-like 유사배열
-  - length 프로퍼티가 있는 객체
+ array-like 유사배열
+ - length 프로퍼티가 있는 객체
 
-`Array.from(obj[, mapFn, thisArg])`
-  - iterable 객체나 array-like 객체로 배열을 만드느 메서드
+ `Array.from(obj[, mapFn, thisArg])`
+ - iterable 객체나 array-like 객체로 배열을 만드는 메서드
  */
 
 describe('iterable 객체', () => {

@@ -1,4 +1,4 @@
-/*
+/**
 try..catch가 동작하지 못하는 경우
   - 실행 가능한 코드 중 발생하는 에러(runtime error or exception)에만 동작
     - 문법적으로 잘못된 경우(parse-time error)에는 동작하지 않음.
@@ -14,8 +14,6 @@ try..catch가 동작하지 못하는 경우
   }
 
 에러 핸들링을 하지 않은 경우 에러가 발생하면면 스크립트가 죽는다.
-
-catch 블록 안에서 다시 던져진 에러는 try..catch 밖으로 던져진다. 밖에 try..catch가 있다면 여기서 에러를 잡는다. 아니면 스크립트가 죽는다.
 
 finally는 try..catch절에 return이 있는 경우에도 반드시 실행된다.
  */
@@ -48,6 +46,9 @@ describe("'try..catch'와 에러 핸들링", () => {
     }
   })
 
+  /**
+  catch 블록 안에서 다시 던져진 에러는 try..catch 밖으로 던져진다. 밖에 try..catch가 있다면 여기서 에러를 잡는다. 아니면 스크립트가 죽는다.
+  */
   test('다시 던지기', () => {
     function readData() {
       let json = '{ "age": 30 }'

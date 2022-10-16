@@ -1,4 +1,4 @@
-/*
+/**
 Rabbit.prototype = animal은 "new Rabbit을 호출해 만든 새로운 객체의 [[Prototype]]을 animal로 설정하라."는 것을 의미합니다.
 
  */

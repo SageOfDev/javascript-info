@@ -82,12 +82,12 @@ describe('커스텀 에러와 에러 확장', () => {
   })
 
   /**
-  위 함수 readUser 다음 문제를 가지고 있다.
-    - 앞으로 readUser가 커지면서 새로운 커스텀 에러 클래스가 생성된다면, 호출 부분이 모두 수정되어야 한다.(호출하는 곳이 1억개라고 생각해보아라...)
+   위 함수 readUser 다음 문제를 가지고 있다.
+   - 앞으로 readUser가 커지면서 새로운 커스텀 에러 클래스가 생성된다면, 호출 부분이 모두 수정되어야 한다.(호출하는 곳이 1억개라고 생각해보아라...)
 
-  예외 감싸기(wrapping exception): 예외를 감싸는 포괄적인 에러 클래스를 만들고 호출 부분에선 해당 클래스만 처리하면 된다.
-    1. '데이터 읽기'와 같은 포괄적인 에러를 대변하는 새로운 에러 클래스(ReadError)를 만듬
-    2. 함수 readUser에서 발생하는 ValidationError, SyntaxError 등의 에러는 readUser 내부에서 잡고 이때 ReadError를 생성
+   예외 감싸기(wrapping exception): 예외를 감싸는 포괄적인 에러 클래스를 만들고 호출 부분에선 해당 클래스만 처리하면 된다.
+   1. '데이터 읽기'와 같은 포괄적인 에러를 대변하는 새로운 에러 클래스(ReadError)를 만듬
+   2. 함수 readUser에서 발생하는 ValidationError, SyntaxError 등의 에러는 readUser 내부에서 잡고 이때 ReadError를 생성
     3. ReadError 객체의 cause 프로퍼티엔 실제 에러에 대한 참조가 저장
    */
   test('예외 감싸기', () => {

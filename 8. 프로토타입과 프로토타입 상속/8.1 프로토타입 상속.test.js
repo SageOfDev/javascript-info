@@ -1,5 +1,3 @@
-/**
- */
 describe('프로토타입 상속', () => {
   let animal = {
     eats: true,
